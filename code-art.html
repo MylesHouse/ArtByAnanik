@@ -8,10 +8,10 @@
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.1/p5.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.1/addons/p5.sound.min.js"></script>
+    <script src="https://unpkg.com/ml5@1/dist/ml5.min.js"></script>
 
     <script src="optical_illusion.js"></script>
     <script src="experimental_clock.js"></script>
-    <script src="experimental_camera.js"></script>
     <script src="make_noise.js"></script>
     <script src="skate_morph.js"></script>
     <script src="catch_me.js"></script>
@@ -19,7 +19,8 @@
     <script src="pier.js"></script>
     <script src="quilts.js"></script>
     <script src="orchid.js"></script>
-    </head>
+    <script src="kaleidoscope.js"></script>
+</head>
 
 <body>
 
@@ -30,12 +31,18 @@
     <div class="main-container">
 
         <div class="project-wrapper">
+            <div class="visual-container" id="kaleidoscope-container"></div>
+            <div class="project-info">
+                <h2>Experimental Camera</h2>
+                <p>An interactive exploration of capturing human motion. This piece uses ML5 hand tracking to map the user's palm movements to a generative kaleidoscope, shifting colors and speed based on hand openness.</p>
+            </div>
+        </div>
+
+        <div class="project-wrapper">
             <div class="visual-container" id="optical_illusion-container"></div>
             <div class="project-info">
                 <h2>Optical Illusion</h2>
-                <p>An installation piece that uses visual optical illusions, changing shapes and colors in response to live or recorded music.
-Developed the piece using p5.js to translate audio input into real-time visual output. 
-Explored the relationship between sound, perception, and immersive experience.</p>
+                <p>An installation piece that uses visual optical illusions, changing shapes and colors in response to music. Developed using p5.js to translate audio input into real-time visual output.</p>
             </div>
         </div>
 
@@ -43,26 +50,15 @@ Explored the relationship between sound, perception, and immersive experience.</
             <div class="visual-container">
                 <iframe 
                     src="https://editor.p5js.org/_ana_/full/qb80P1x_h" 
-                    width="800" height="640" scrolling="no">
+                    width="640" height="480" scrolling="no">
                 </iframe>
             </div>
             <div class="project-info">
                 <h2>Autobiographical Game</h2>
-                <p>A digital game exploring my personal space and narrative, with original illustrations and interactive elements. Enjoy snooping around my room and find out about me!</p>
+                <p>A digital game exploring my personal space and narrative, with original illustrations and interactive elements. Enjoy snooping around my room!</p>
             </div>
         </div>
 
-        
-    <div class="project-wrapper">
-    <div class="visual-container" id="kaleidoscope-container">
-        </div>
-    <div class="project-info">
-        <h2>Experimental Camera</h2>
-        <p>An interactive exploration of capturing human motion. This piece uses ML5 hand tracking to map the user's palm movements to a generative kaleidoscope, shifting colors and speed based on hand openness.</p>
-    </div>
-</div>
-
-        
         <div class="project-wrapper">
             <div class="visual-container">
                 <div class="clock-layout">
@@ -72,39 +68,39 @@ Explored the relationship between sound, perception, and immersive experience.</
             </div>
             <div class="project-info">
                 <h2>Experimental Clock</h2>
-                <p> A system that represents time and interaction through the body’s motion. This installation piece tracks users’ movements and visualizes them in real time with colorful graphics.</p>
+                <p>A system that represents time and interaction through the body’s motion, tracking movements and visualizing them with colorful graphics.</p>
             </div>
         </div>
 
         <div class="project-wrapper">
-    <div class="visual-container" id="make_noise-container"></div>
-    <div class="project-info">
-        <h2>Make Some Noise</h2>
-        <p>See how your voice levels affect the text.</p>
-    </div>
-</div>
+            <div class="visual-container" id="make_noise-container"></div>
+            <div class="project-info">
+                <h2>Make Some Noise</h2>
+                <p>See how your voice levels affect the text.</p>
+            </div>
+        </div>
 
-<div class="project-wrapper">
-    <div class="visual-container" id="skate_morph-container"></div>
-    <div class="project-info">
-        <h2>Skate Morph</h2>
-        <p>Dynamic word transitions, morphing into each other.</p>
-    </div>
-</div>
+        <div class="project-wrapper">
+            <div class="visual-container" id="skate_morph-container"></div>
+            <div class="project-info">
+                <h2>Skate Morph</h2>
+                <p>Dynamic word transitions, morphing into each other.</p>
+            </div>
+        </div>
 
-<div class="project-wrapper">
-    <div class="visual-container" id="catch_me-container"></div>
-    <div class="project-info">
-        <h2>Catch Me</h2>
-        <p>Interactive text game. Cath the letters!.</p>
-    </div>
-</div>
+        <div class="project-wrapper">
+            <div class="visual-container" id="catch_me-container"></div>
+            <div class="project-info">
+                <h2>Catch Me</h2>
+                <p>Interactive text game. Catch the letters!</p>
+            </div>
+        </div>
 
         <div class="project-wrapper">
             <div class="visual-container" id="face_generator-container"></div>
             <div class="project-info">
                 <h2>Face Generator</h2>
-                <p>Randomly generating facial features. Based on mine and my friennd's faces. </p>
+                <p>Randomly generating facial features based on mine and my friend's faces.</p>
             </div>
         </div>
 
@@ -112,7 +108,7 @@ Explored the relationship between sound, perception, and immersive experience.</
             <div class="visual-container" id="pier-container"></div>
             <div class="project-info">
                 <h2>The Pier</h2>
-                <p>A short animation piece of the location. </p>
+                <p>A short animation piece of the location.</p>
             </div>
         </div>
 
@@ -120,8 +116,7 @@ Explored the relationship between sound, perception, and immersive experience.</
             <div class="visual-container">
                 <iframe 
                     src="https://editor.p5js.org/_ana_/full/e3dn4LRlT"
-                    width="1000" 
-                    height="700" 
+                    width="640" height="480" 
                     style="border: none; overflow: hidden; max-width: 100%;"
                     scrolling="no"
                     allow="camera; microphone; autoplay">
@@ -129,7 +124,7 @@ Explored the relationship between sound, perception, and immersive experience.</
             </div>
             <div class="project-info">
                 <h2>Exquisite Corpse</h2>
-                <p>An interactive piece where illustrated body parts mimic real-life movements and tracks the human body using ML5 and machine learning. This system captures live movement and translates it into digital illustrations.</p>
+                <p>An interactive piece where illustrated body parts mimic real-life movements, tracking the human body using ML5.</p>
             </div>
         </div>
 
@@ -145,7 +140,7 @@ Explored the relationship between sound, perception, and immersive experience.</
             <div class="visual-container" id="orchid-container"></div>
             <div class="project-info">
                 <h2>The Orchid</h2>
-                <p>A digital illustration that changes dynamically based on the user’s mouse movement. Exploring real-time interactivity and user engagement. </p>
+                <p>A digital illustration that changes dynamically based on the user’s mouse movement.</p>
             </div>
         </div>
 
