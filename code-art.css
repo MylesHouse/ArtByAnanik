@@ -1,11 +1,12 @@
-/* 1. REVERT FONT & BACKGROUND */
-body {
+/* 1. GLOBAL RESET */
+html, body {
     margin: 0;
     padding: 0;
-    /* Reverting to Serif (Times New Roman) as seen in your screenshots */
+    /* Using Serif to match your screenshots */
     font-family: 'Times New Roman', Times, serif; 
     background-color: #FFFFFF; 
     color: #000;
+    overflow-x: hidden;
 }
 
 /* 2. HEADER */
@@ -20,73 +21,98 @@ header img {
     height: auto;
 }
 
-/* 3. MAIN SPINAL CORD */
+/* 3. MAIN CONTAINER (The "Spinal Cord") */
 .main-container {
-    max-width: 1400px; /* Made wider to fit sketch + text side-by-side */
+    max-width: 1400px; 
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centers the whole row */
-    gap: 100px; 
+    align-items: center; 
+    gap: 120px; /* Space between different project rows */
     padding-bottom: 150px;
 }
 
-/* 4. PROJECT WRAPPER (The Row) */
+/* 4. PROJECT ROW WRAPPER */
 .project-wrapper {
     display: flex;
-    flex-direction: row; /* Puts Sketch Left, Text Right */
-    align-items: center; /* Aligns them vertically in the middle */
+    flex-direction: row; /* Sketch Left, Text Right */
+    align-items: center; 
     justify-content: center;
     width: 100%;
 }
 
-/* 5. VISUAL CONTAINER (The Sketch) */
+/* 5. VISUAL CONTAINER (The Sketch Box) */
 .visual-container {
-    /* Ensures the sketch is the anchor */
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #000; /* Keeps the area dark while camera loads */
+    width: 640px;  /* Matches your p5.js width */
+    height: 480px; /* Matches your p5.js height */
+    overflow: hidden;
+}
+
+/* Specific fix for the Kaleidoscope Canvas */
+#kaleidoscope-container canvas {
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 /* 6. INFO BOX (Title & Description) */
 .project-info {
-    width: 300px;        /* Fixed width for text */
-    margin-left: 40px;   /* Space between Sketch and Text */
-    text-align: left;    /* Align text to the left */
+    width: 350px;        
+    margin-left: 50px;   
+    text-align: left;    
     
-    /* THE HOVER MAGIC */
-    opacity: 0;          /* Hidden by default */
-    transition: opacity 0.3s ease; /* Smooth fade in */
+    /* THE HOVER REVEAL EFFECT */
+    opacity: 0;          
+    transition: opacity 0.4s ease-in-out; 
 }
 
-/* WHEN YOU HOVER OVER THE WRAPPER -> SHOW THE INFO */
+/* Trigger the text to show when hovering over the row */
 .project-wrapper:hover .project-info {
     opacity: 1;
 }
 
-/* Typography Revert */
+/* Typography for Info Box */
 .project-info h2 {
-    font-size: 24px;
+    font-size: 26px;
     margin-top: 0;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     font-weight: bold;
-    text-transform: none; /* Removed uppercase */
 }
 
 .project-info p {
     font-size: 16px;
-    line-height: 1.4;
+    line-height: 1.5;
     color: #333;
 }
 
-/* CLOCK SPECIFIC: Groups the Clock and Video together */
+/* 7. SPECIAL LAYOUTS (Experimental Clock / Video Side-by-Side) */
 .clock-layout {
     display: flex;
     gap: 20px;
     align-items: center;
 }
 
+/* iframe handling for Editor links */
 iframe {
     border: none;
     display: block;
+    background-color: #000;
+}
+
+/* Responsive fix for smaller screens */
+@media (max-width: 1000px) {
+    .project-wrapper {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .project-info {
+        opacity: 1; /* Always show text on mobile since there is no hover */
+        margin-left: 0;
+        text-align: center;
+        width: 90%;
+    }
 }
