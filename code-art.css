@@ -1,12 +1,10 @@
 /* 1. GLOBAL RESET */
-html, body {
+body {
     margin: 0;
     padding: 0;
-    /* Using Serif to match your screenshots */
     font-family: 'Times New Roman', Times, serif; 
     background-color: #FFFFFF; 
     color: #000;
-    overflow-x: hidden;
 }
 
 /* 2. HEADER */
@@ -21,66 +19,57 @@ header img {
     height: auto;
 }
 
-/* 3. MAIN CONTAINER (The "Spinal Cord") */
+/* 3. MAIN CONTAINER */
 .main-container {
     max-width: 1400px; 
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center; 
-    gap: 120px; /* Space between different project rows */
+    gap: 120px; 
     padding-bottom: 150px;
 }
 
-/* 4. PROJECT ROW WRAPPER */
+/* 4. PROJECT ROW */
 .project-wrapper {
     display: flex;
-    flex-direction: row; /* Sketch Left, Text Right */
+    flex-direction: row; 
     align-items: center; 
     justify-content: center;
     width: 100%;
 }
 
-/* 5. VISUAL CONTAINER (The Sketch Box) */
+/* 5. VISUAL CONTAINER (No more black boxes!) */
 .visual-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #000; /* Keeps the area dark while camera loads */
-    width: 640px;  /* Matches your p5.js width */
-    height: 480px; /* Matches your p5.js height */
-    overflow: hidden;
+    background: transparent; /* Removed the black background */
 }
 
-/* Specific fix for the Kaleidoscope Canvas */
-#kaleidoscope-container canvas {
+/* Ensure canvas itself behaves well */
+canvas {
     display: block;
     max-width: 100%;
-    height: auto;
 }
 
-/* 6. INFO BOX (Title & Description) */
+/* 6. INFO BOX (Hover reveal) */
 .project-info {
     width: 350px;        
     margin-left: 50px;   
     text-align: left;    
-    
-    /* THE HOVER REVEAL EFFECT */
     opacity: 0;          
-    transition: opacity 0.4s ease-in-out; 
+    transition: opacity 0.4s ease; 
 }
 
-/* Trigger the text to show when hovering over the row */
 .project-wrapper:hover .project-info {
     opacity: 1;
 }
 
-/* Typography for Info Box */
 .project-info h2 {
     font-size: 26px;
     margin-top: 0;
     margin-bottom: 12px;
-    font-weight: bold;
 }
 
 .project-info p {
@@ -89,30 +78,15 @@ header img {
     color: #333;
 }
 
-/* 7. SPECIAL LAYOUTS (Experimental Clock / Video Side-by-Side) */
+/* 7. IFRAME & LAYOUTS */
+iframe {
+    border: none;
+    display: block;
+    /* No forced background color here either */
+}
+
 .clock-layout {
     display: flex;
     gap: 20px;
     align-items: center;
-}
-
-/* iframe handling for Editor links */
-iframe {
-    border: none;
-    display: block;
-    background-color: #000;
-}
-
-/* Responsive fix for smaller screens */
-@media (max-width: 1000px) {
-    .project-wrapper {
-        flex-direction: column;
-        gap: 20px;
-    }
-    .project-info {
-        opacity: 1; /* Always show text on mobile since there is no hover */
-        margin-left: 0;
-        text-align: center;
-        width: 90%;
-    }
 }
