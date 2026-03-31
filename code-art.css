@@ -1,4 +1,3 @@
-/* 1. GLOBAL RESET */
 body {
     margin: 0;
     padding: 0;
@@ -7,7 +6,6 @@ body {
     color: #000;
 }
 
-/* 2. HEADER */
 header {
     text-align: center;
     padding-top: 50px;
@@ -19,47 +17,36 @@ header img {
     height: auto;
 }
 
-/* 3. MAIN CONTAINER */
 .main-container {
-    max-width: 1400px; 
+    max-width: 1400px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center; 
-    gap: 120px; 
+    gap: 100px; 
     padding-bottom: 150px;
 }
 
-/* 4. PROJECT ROW */
 .project-wrapper {
     display: flex;
-    flex-direction: row; 
-    align-items: center; 
+    flex-direction: row;
+    align-items: center;
     justify-content: center;
     width: 100%;
 }
 
-/* 5. VISUAL CONTAINER (No more black boxes!) */
 .visual-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: transparent; /* Removed the black background */
 }
 
-/* Ensure canvas itself behaves well */
-canvas {
-    display: block;
-    max-width: 100%;
-}
-
-/* 6. INFO BOX (Hover reveal) */
 .project-info {
-    width: 350px;        
-    margin-left: 50px;   
-    text-align: left;    
-    opacity: 0;          
-    transition: opacity 0.4s ease; 
+    width: 300px;
+    margin-left: 40px;
+    text-align: left;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 .project-wrapper:hover .project-info {
@@ -67,26 +54,25 @@ canvas {
 }
 
 .project-info h2 {
-    font-size: 26px;
+    font-size: 24px;
     margin-top: 0;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
+    font-weight: bold;
 }
 
 .project-info p {
     font-size: 16px;
-    line-height: 1.5;
+    line-height: 1.4;
     color: #333;
-}
-
-/* 7. IFRAME & LAYOUTS */
-iframe {
-    border: none;
-    display: block;
-    /* No forced background color here either */
 }
 
 .clock-layout {
     display: flex;
     gap: 20px;
     align-items: center;
+}
+
+iframe {
+    border: none;
+    display: block;
 }
