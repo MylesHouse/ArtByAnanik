@@ -86,7 +86,7 @@ iframe {
 }
 
 .quiz-button-img {
-    max-width: 250px; /* Adjust this size to fit your design */
+    max-width: 150px; /* Adjust this size to fit your design */
     height: auto;
     transition: transform 0.3s ease, opacity 0.3s ease;
     cursor: pointer;
