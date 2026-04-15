@@ -1,22 +1,25 @@
+/* --- CONTAINER SETUP --- */
 .macbook-pro {
   background-color: #ffffff;
   width: 1440px; 
   height: 900px;
   position: relative;
   overflow: hidden;
+  margin: 0 auto; /* Centers the quiz box on the screen */
   box-shadow: 0 10px 50px rgba(0,0,0,0.1);
 }
 
-/* Positioning for the Illustration */
+/* --- IMAGES & ILLUSTRATIONS --- */
 .macbook-pro .girlcrying {
   position: absolute;
   top: 206px;
   left: 435px;
   width: 455px;
   height: auto;
+  z-index: 1;
 }
 
-/* Question Text Styling */
+/* --- MAIN QUESTION TEXT --- */
 .macbook-pro .you-have-a-lot-of {
   position: absolute;
   top: 30px;
@@ -30,7 +33,7 @@
   line-height: 1.4;
 }
 
-/* Option Labels (A, B, C) */
+/* --- OPTION TEXT (A, B, C) --- */
 .macbook-pro .p, 
 .macbook-pro .text-wrapper-5, 
 .macbook-pro .text-wrapper-7 {
@@ -47,49 +50,32 @@
 .macbook-pro .text-wrapper-5 { top: 365px; left: 25px; }
 .macbook-pro .text-wrapper-7 { top: 505px; left: 25px; }
 
-/* Status Labels (Still Stressed / Feeling Better) */
-.macbook-pro .text-wrapper, .macbook-pro .text-wrapper-2, .macbook-pro .text-wrapper-6 {
-  position: absolute; color: #e91b1b; font-family: "Inria Serif", serif; font-size: 14px; left: 27px;
-}
-.macbook-pro .div, .macbook-pro .text-wrapper-3, .macbook-pro .text-wrapper-4 {
-  position: absolute; color: #51a115; font-family: "Inria Serif", serif; font-size: 14px; left: 321px;
-}
-
-.macbook-pro .text-wrapper { top: 267px; } 
-.macbook-pro .div { top: 268px; }
-.macbook-pro .text-wrapper-2 { top: 405px; }
-.macbook-pro .text-wrapper-3 { top: 409px; }
-.macbook-pro .text-wrapper-6 { top: 545px; }
-.macbook-pro .text-wrapper-4 { top: 549px; }
-
-/* NEXT BUTTON DESIGN */
-.macbook-pro .next-container {
+/* --- SLIDER LABELS (Stressed/Better) --- */
+.macbook-pro .text-wrapper, 
+.macbook-pro .text-wrapper-2, 
+.macbook-pro .text-wrapper-6,
+.macbook-pro .div, 
+.macbook-pro .text-wrapper-3, 
+.macbook-pro .text-wrapper-4 {
   position: absolute;
-  top: 154px;
-  left: 732px;
-  width: 127px;
-  height: 74px;
-  cursor: pointer;
-  transition: transform 0.2s ease;
-}
-
-.macbook-pro .next-container:hover {
-  transform: scale(1.05);
-}
-
-.macbook-pro .vector { width: 100%; }
-
-.macbook-pro .text-wrapper-8 {
-  position: absolute;
-  top: 25px;
-  left: 22px;
   font-family: "Inria Serif", serif;
-  color: #000000;
-  font-size: 20px;
-  letter-spacing: 3.4px;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 2.38px;
+  white-space: nowrap;
 }
 
-/* REAL SLIDER STYLING */
+/* Red Labels (Left side) */
+.macbook-pro .text-wrapper { top: 267px; left: 27px; color: #e91b1b; }
+.macbook-pro .text-wrapper-2 { top: 405px; left: 23px; color: #e91b1b; }
+.macbook-pro .text-wrapper-6 { top: 545px; left: 23px; color: #e91b1b; }
+
+/* Green Labels (Right side) */
+.macbook-pro .div { top: 268px; left: 321px; color: #51a115; }
+.macbook-pro .text-wrapper-3 { top: 409px; left: 321px; color: #51a115; }
+.macbook-pro .text-wrapper-4 { top: 549px; left: 306px; color: #51a115; }
+
+/* --- FUNCTIONAL SLIDERS --- */
 .slider-container {
   position: absolute;
   width: 361px;
@@ -99,7 +85,13 @@
   padding: 0 15px;
   display: flex;
   align-items: center;
+  left: 45px;
 }
+
+/* Specific heights for the 3 sliders */
+.slider-container.a { top: 308px; }
+.slider-container.b { top: 445px; }
+.slider-container.c { top: 576px; }
 
 input[type=range] {
   -webkit-appearance: none;
@@ -123,4 +115,36 @@ input[type=range]::-webkit-slider-thumb {
   cursor: pointer;
   margin-top: -7px;
   border: 2px solid white;
+}
+
+/* --- NEXT BUTTON --- */
+.macbook-pro .next-container {
+  position: absolute;
+  top: 154px;
+  left: 732px;
+  width: 127px;
+  height: 74px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  z-index: 10;
+}
+
+.macbook-pro .next-container:hover {
+  transform: scale(1.1);
+}
+
+.macbook-pro .next-container img {
+  width: 100%;
+  height: 100%;
+}
+
+.macbook-pro .text-wrapper-8 {
+  position: absolute;
+  top: 25px;
+  left: 22px;
+  font-family: "Inria Serif", serif;
+  color: #000000;
+  font-size: 20px;
+  letter-spacing: 3.4px;
+  pointer-events: none; /* Allows click to pass through to the button background */
 }
