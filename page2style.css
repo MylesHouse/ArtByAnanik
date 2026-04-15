@@ -1,0 +1,126 @@
+.macbook-pro {
+  background-color: #ffffff;
+  width: 1440px; 
+  height: 900px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 50px rgba(0,0,0,0.1);
+}
+
+/* Positioning for the Illustration */
+.macbook-pro .girlcrying {
+  position: absolute;
+  top: 206px;
+  left: 435px;
+  width: 455px;
+  height: auto;
+}
+
+/* Question Text Styling */
+.macbook-pro .you-have-a-lot-of {
+  position: absolute;
+  top: 30px;
+  left: 25px;
+  width: 821px;
+  font-family: "Inria Serif", serif;
+  font-weight: 700;
+  color: #14076d;
+  font-size: 28px;
+  letter-spacing: 4.76px;
+  line-height: 1.4;
+}
+
+/* Option Labels (A, B, C) */
+.macbook-pro .p, 
+.macbook-pro .text-wrapper-5, 
+.macbook-pro .text-wrapper-7 {
+  position: absolute;
+  width: 520px;
+  font-family: "Inria Serif", serif;
+  font-weight: 700;
+  color: #110000;
+  font-size: 16px;
+  letter-spacing: 2.72px;
+}
+
+.macbook-pro .p { top: 190px; left: 25px; }
+.macbook-pro .text-wrapper-5 { top: 365px; left: 25px; }
+.macbook-pro .text-wrapper-7 { top: 505px; left: 25px; }
+
+/* Status Labels (Still Stressed / Feeling Better) */
+.macbook-pro .text-wrapper, .macbook-pro .text-wrapper-2, .macbook-pro .text-wrapper-6 {
+  position: absolute; color: #e91b1b; font-family: "Inria Serif", serif; font-size: 14px; left: 27px;
+}
+.macbook-pro .div, .macbook-pro .text-wrapper-3, .macbook-pro .text-wrapper-4 {
+  position: absolute; color: #51a115; font-family: "Inria Serif", serif; font-size: 14px; left: 321px;
+}
+
+.macbook-pro .text-wrapper { top: 267px; } 
+.macbook-pro .div { top: 268px; }
+.macbook-pro .text-wrapper-2 { top: 405px; }
+.macbook-pro .text-wrapper-3 { top: 409px; }
+.macbook-pro .text-wrapper-6 { top: 545px; }
+.macbook-pro .text-wrapper-4 { top: 549px; }
+
+/* NEXT BUTTON DESIGN */
+.macbook-pro .next-container {
+  position: absolute;
+  top: 154px;
+  left: 732px;
+  width: 127px;
+  height: 74px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.macbook-pro .next-container:hover {
+  transform: scale(1.05);
+}
+
+.macbook-pro .vector { width: 100%; }
+
+.macbook-pro .text-wrapper-8 {
+  position: absolute;
+  top: 25px;
+  left: 22px;
+  font-family: "Inria Serif", serif;
+  color: #000000;
+  font-size: 20px;
+  letter-spacing: 3.4px;
+}
+
+/* REAL SLIDER STYLING */
+.slider-container {
+  position: absolute;
+  width: 361px;
+  height: 40px;
+  background-color: #b7d5e9;
+  border-radius: 17px;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+  width: 100%;
+  background: transparent;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 10px;
+  background: #ffffff;
+  border-radius: 17px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  background: #3d42ce;
+  cursor: pointer;
+  margin-top: -7px;
+  border: 2px solid white;
+}
