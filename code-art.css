@@ -76,3 +76,24 @@ iframe {
     border: none;
     display: block;
 }
+
+/* Quiz Button Styles */
+.quiz-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.quiz-button-img {
+    max-width: 250px; /* Adjust this size to fit your design */
+    height: auto;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    cursor: pointer;
+}
+
+/* Hover Effect: Grows slightly and brightens */
+.quiz-button-img:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
