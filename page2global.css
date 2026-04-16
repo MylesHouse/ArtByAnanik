@@ -6,17 +6,17 @@
   box-sizing: border-box;
 }
 
+/* This is the magic part for centering */
 html, body {
-  margin: 0px;
+  margin: 0;
+  padding: 0;
+  width: 100%;
   height: 100%;
-  overflow-x: hidden;
-}
-
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #f0f0f0; /* Makes the white quiz area stand out */
+  display: flex;           /* Turns on the centering engine */
+  justify-content: center; /* Centers horizontally (left to right) */
+  align-items: center;     /* Centers vertically (top to bottom) */
+  background-color: #f0f0f0; 
+  overflow-x: hidden;      /* Prevents weird side-scrolling */
 }
 
 a {

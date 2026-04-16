@@ -5,8 +5,8 @@
   height: 900px;
   position: relative;
   overflow: hidden;
-  margin: 0 auto; /* Centers the quiz box on the screen */
-  box-shadow: 0 10px 50px rgba(0,0,0,0.1);
+  flex-shrink: 0; /* ADD THIS LINE */
+  box-shadow: 0 10px 50px rgba(0,0,0,0.1); /* Makes it look like a nice card */
 }
 
 /* --- IMAGES & ILLUSTRATIONS --- */

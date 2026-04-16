@@ -1,23 +1,22 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Inria+Serif:wght@700&display=swap');
 
 * {
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
 }
 
-html,
-body {
-  margin: 0px;
+/* This is the magic part for centering */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
   height: 100%;
-  /* This ensures the quiz is centered on the screen */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: flex;           /* Turns on the centering engine */
+  justify-content: center; /* Centers horizontally (left to right) */
+  align-items: center;     /* Centers vertically (top to bottom) */
   background-color: #f0f0f0; 
-}
-
-button:focus-visible {
-  outline: 2px solid #4a90e2 !important;
+  overflow-x: hidden;      /* Prevents weird side-scrolling */
 }
 
 a {
