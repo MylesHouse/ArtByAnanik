@@ -1,145 +1,93 @@
-/* --- CONTAINER SETUP --- */
 .macbook-pro {
-  background-color: #ffffff;
-  width: 890px;
-  height: 633px;
-  position: relative;
-  overflow: hidden;
-  flex-shrink: 0;
-  box-shadow: 0 10px 50px rgba(0,0,0,0.1);
+    background-color: #ffffff;
+    width: 100%;
+    min-width: 890px;
+    height: 100vh;
+    position: relative;
+    margin: 0 auto;
 }
 
-/* --- GIRL CRYING IMAGE --- */
-.macbook-pro .girlcrying {
-  position: absolute;
-  top: 145px;
-  left: 390px;
-  width: 497px;
-  height: auto;
-  z-index: 1;
+/* The Question Text */
+.text-wrapper {
+    position: absolute;
+    top: 44px;
+    left: 45px;
+    width: 767px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #000;
 }
 
-/* --- MAIN QUESTION TEXT --- */
-.macbook-pro .you-have-a-lot-of {
-  position: absolute;
-  top: 26px;
-  left: 20px;
-  width: 580px;
-  font-family: "Inria Serif", serif;
-  font-weight: 700;
-  color: #14076d;
-  font-size: 22px;
-  letter-spacing: 3px;
-  line-height: 1.5;
+/* --- THE BUTTON LOGIC --- */
+
+.quiz-option {
+    position: absolute;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 4px solid transparent; /* Hidden until clicked */
+    border-radius: 20px; /* Gives a nice rounded corner to the stroke */
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
 }
 
-/* --- OPTION TEXT (A, B, C) --- */
-.macbook-pro .p,
-.macbook-pro .text-wrapper-5,
-.macbook-pro .text-wrapper-7 {
-  position: absolute;
-  width: 380px;
-  font-family: "Inria Serif", serif;
-  font-weight: 700;
-  color: #110000;
-  font-size: 14px;
-  letter-spacing: 2px;
-  line-height: 1.4;
-}
-.macbook-pro .p            { top: 195px; left: 20px; }
-.macbook-pro .text-wrapper-5 { top: 340px; left: 20px; }
-.macbook-pro .text-wrapper-7 { top: 475px; left: 20px; }
-
-/* --- SLIDER LABELS --- */
-.macbook-pro .text-wrapper,
-.macbook-pro .text-wrapper-2,
-.macbook-pro .text-wrapper-6,
-.macbook-pro .div,
-.macbook-pro .text-wrapper-3,
-.macbook-pro .text-wrapper-4 {
-  position: absolute;
-  font-family: "Inria Serif", serif;
-  font-weight: 700;
-  font-size: 12px;
-  letter-spacing: 2px;
-  white-space: nowrap;
+/* The Green Border that appears when JS adds the 'selected' class */
+.quiz-option.selected {
+    border-color: #4CAF50; 
+    box-shadow: 0 0 15px rgba(76, 175, 80, 0.3);
+    background-color: rgba(76, 175, 80, 0.05);
 }
 
-/* Red labels */
-.macbook-pro .text-wrapper  { top: 268px; left: 20px;  color: #e91b1b; }
-.macbook-pro .text-wrapper-2 { top: 408px; left: 20px;  color: #e91b1b; }
-.macbook-pro .text-wrapper-6 { top: 543px; left: 20px;  color: #e91b1b; }
-
-/* Green labels */
-.macbook-pro .div           { top: 268px; left: 310px; color: #51a115; }
-.macbook-pro .text-wrapper-3 { top: 408px; left: 310px; color: #51a115; }
-.macbook-pro .text-wrapper-4 { top: 543px; left: 310px; color: #51a115; }
-
-/* --- SLIDERS --- */
-.slider-container {
-  position: absolute;
-  width: 361px;
-  height: 36px;
-  background-color: #b7d5e9;
-  border-radius: 17px;
-  padding: 0 15px;
-  display: flex;
-  align-items: center;
-  left: 20px;
-}
-.slider-container.a { top: 290px; }
-.slider-container.b { top: 428px; }
-.slider-container.c { top: 563px; }
-
-input[type=range] {
-  -webkit-appearance: none;
-  width: 100%;
-  background: transparent;
-}
-input[type=range]::-webkit-slider-runnable-track {
-  width: 100%;
-  height: 10px;
-  background: #ffffff;
-  border-radius: 17px;
-}
-input[type=range]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  height: 24px;
-  width: 24px;
-  border-radius: 50%;
-  background: #3d42ce;
-  cursor: pointer;
-  margin-top: -7px;
-  border: 2px solid white;
+.quiz-option img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
-/* --- NEXT BUTTON --- */
-.macbook-pro .next-container {
-  position: absolute;
-  top: 108px;
-  left: 700px;
-  width: 127px;
-  height: 74px;
-  cursor: pointer;
-  transition: transform 0.2s ease;
-  z-index: 10;
-  display: block;
+/* Positioning for your specific images */
+.image-2 { top: 137px; left: 69px; width: 143px; height: 143px; }
+.image-3 { top: 304px; left: 714px; width: 162px; height: 162px; }
+.image-4 { top: 511px; left: 35px; width: 139px; height: 119px; }
+.image-5 { top: 272px; left: 11px; width: 127px; height: 127px; }
+.image-6 { top: 391px; left: 25px; width: 120px; height: 120px; }
+.image-7 { top: 471px; left: 680px; width: 151px; height: 151px; }
+
+/* The Main Background Graphic */
+.image { top: 109px; left: 212px; width: 486px; height: 518px; position: absolute; }
+
+/* Decorative Lines and Dots */
+.line { position: absolute; top: 240px; left: 183px; width: 135px; }
+.line-2 { position: absolute; top: 354px; left: 127px; width: 160px; }
+.line-3 { position: absolute; top: 436px; left: 376px; width: 296px; }
+.line-4 { position: absolute; top: 385px; left: 359px; width: 359px; }
+.line-5 { position: absolute; top: 425px; left: 141px; width: 167px; }
+.line-6 { position: absolute; top: 471px; left: 171px; width: 146px; }
+.line-7 { position: absolute; top: 192px; left: 406px; width: 303px; }
+
+.ellipse, .ellipse-2, .ellipse-3, .ellipse-4, .ellipse-5, .ellipse-6, .div {
+    position: absolute; width: 9px; height: 9px; border-radius: 50%; background: #000;
 }
-.macbook-pro .next-container:hover {
-  transform: scale(1.1);
-}
-.macbook-pro .next-container img {
-  width: 100%;
-  height: 100%;
-}
-.macbook-pro .text-wrapper-8 {
-  position: absolute;
-  top: 120px;
-  left: 722px;
-  font-family: "Inria Serif", serif;
-  color: #000000;
-  font-size: 20px;
-  letter-spacing: 3.4px;
-  pointer-events: none;
-  z-index: 11;
+.ellipse { top: 382px; left: 287px; }
+.ellipse-2 { top: 349px; left: 398px; }
+.ellipse-3 { top: 433px; left: 364px; }
+.ellipse-4 { top: 418px; left: 308px; }
+.ellipse-5 { top: 464px; left: 317px; }
+.ellipse-6 { top: 344px; left: 317px; }
+.div { top: 379px; left: 350px; }
+
+/* NEXT BUTTON */
+.next-btn {
+    display: none; /* Hidden until an image is clicked */
+    position: absolute;
+    bottom: 40px;
+    right: 60px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 45px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
