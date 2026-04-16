@@ -1,20 +1,20 @@
 /* --- CONTAINER SETUP --- */
 .macbook-pro {
   background-color: #ffffff;
-  width: 1440px; 
-  height: 900px;
+  width: 890px;
+  height: 633px;
   position: relative;
   overflow: hidden;
   flex-shrink: 0;
   box-shadow: 0 10px 50px rgba(0,0,0,0.1);
 }
 
-/* --- IMAGES & ILLUSTRATIONS --- */
+/* --- GIRL CRYING IMAGE --- */
 .macbook-pro .girlcrying {
   position: absolute;
-  top: 206px;
-  left: 735px;
-  width: 455px;
+  top: 130px;
+  left: 500px;
+  width: 340px;
   height: auto;
   z-index: 1;
 }
@@ -22,74 +22,74 @@
 /* --- MAIN QUESTION TEXT --- */
 .macbook-pro .you-have-a-lot-of {
   position: absolute;
-  top: 30px;
-  left: 325px;
-  width: 821px;
+  top: 20px;
+  left: 25px;
+  width: 460px;
   font-family: "Inria Serif", serif;
   font-weight: 700;
   color: #14076d;
-  font-size: 28px;
-  letter-spacing: 4.76px;
-  line-height: 1.4;
+  font-size: 18px;
+  letter-spacing: 2px;
+  line-height: 1.5;
 }
 
 /* --- OPTION TEXT (A, B, C) --- */
-.macbook-pro .p, 
-.macbook-pro .text-wrapper-5, 
+.macbook-pro .p,
+.macbook-pro .text-wrapper-5,
 .macbook-pro .text-wrapper-7 {
   position: absolute;
-  width: 520px;
+  width: 400px;
   font-family: "Inria Serif", serif;
   font-weight: 700;
   color: #110000;
-  font-size: 16px;
-  letter-spacing: 2.72px;
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  line-height: 1.4;
 }
-.macbook-pro .p { top: 190px; left: 325px; }
-.macbook-pro .text-wrapper-5 { top: 365px; left: 325px; }
-.macbook-pro .text-wrapper-7 { top: 505px; left: 325px; }
+.macbook-pro .p          { top: 160px; left: 25px; }
+.macbook-pro .text-wrapper-5 { top: 300px; left: 25px; }
+.macbook-pro .text-wrapper-7 { top: 430px; left: 25px; }
 
-/* --- SLIDER LABELS (Stressed/Better) --- */
-.macbook-pro .text-wrapper, 
-.macbook-pro .text-wrapper-2, 
+/* --- SLIDER LABELS --- */
+.macbook-pro .text-wrapper,
+.macbook-pro .text-wrapper-2,
 .macbook-pro .text-wrapper-6,
-.macbook-pro .div, 
-.macbook-pro .text-wrapper-3, 
+.macbook-pro .div,
+.macbook-pro .text-wrapper-3,
 .macbook-pro .text-wrapper-4 {
   position: absolute;
   font-family: "Inria Serif", serif;
   font-weight: 700;
-  font-size: 14px;
-  letter-spacing: 2.38px;
+  font-size: 11px;
+  letter-spacing: 1.5px;
   white-space: nowrap;
 }
 
-/* Red Labels (Left side) */
-.macbook-pro .text-wrapper { top: 267px; left: 327px; color: #e91b1b; }
-.macbook-pro .text-wrapper-2 { top: 405px; left: 323px; color: #e91b1b; }
-.macbook-pro .text-wrapper-6 { top: 545px; left: 323px; color: #e91b1b; }
+/* Red labels */
+.macbook-pro .text-wrapper  { top: 218px; left: 25px;  color: #e91b1b; }
+.macbook-pro .text-wrapper-2 { top: 358px; left: 25px;  color: #e91b1b; }
+.macbook-pro .text-wrapper-6 { top: 488px; left: 25px;  color: #e91b1b; }
 
-/* Green Labels (Right side) */
-.macbook-pro .div { top: 268px; left: 621px; color: #51a115; }
-.macbook-pro .text-wrapper-3 { top: 409px; left: 621px; color: #51a115; }
-.macbook-pro .text-wrapper-4 { top: 549px; left: 606px; color: #51a115; }
+/* Green labels */
+.macbook-pro .div           { top: 218px; left: 330px; color: #51a115; }
+.macbook-pro .text-wrapper-3 { top: 358px; left: 330px; color: #51a115; }
+.macbook-pro .text-wrapper-4 { top: 488px; left: 330px; color: #51a115; }
 
-/* --- FUNCTIONAL SLIDERS --- */
+/* --- SLIDERS --- */
 .slider-container {
   position: absolute;
   width: 361px;
-  height: 40px;
+  height: 36px;
   background-color: #b7d5e9;
   border-radius: 17px;
   padding: 0 15px;
   display: flex;
   align-items: center;
-  left: 345px;
+  left: 25px;
 }
-
-.slider-container.a { top: 308px; }
-.slider-container.b { top: 445px; }
-.slider-container.c { top: 576px; }
+.slider-container.a { top: 245px; }
+.slider-container.b { top: 385px; }
+.slider-container.c { top: 515px; }
 
 input[type=range] {
   -webkit-appearance: none;
@@ -116,8 +116,8 @@ input[type=range]::-webkit-slider-thumb {
 /* --- NEXT BUTTON --- */
 .macbook-pro .next-container {
   position: absolute;
-  top: 154px;
-  left: 1032px;
+  top: 100px;
+  left: 720px;
   width: 127px;
   height: 74px;
   cursor: pointer;
@@ -133,8 +133,8 @@ input[type=range]::-webkit-slider-thumb {
 }
 .macbook-pro .text-wrapper-8 {
   position: absolute;
-  top: 179px;
-  left: 1054px;
+  top: 124px;
+  left: 742px;
   font-family: "Inria Serif", serif;
   color: #000000;
   font-size: 20px;
