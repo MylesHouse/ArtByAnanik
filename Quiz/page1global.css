@@ -6,17 +6,21 @@
   box-sizing: border-box;
 }
 
-/* This is the magic part for centering */
-html, body {
-  margin: 0;
-  padding: 0;
+html {
   width: 100%;
   height: 100%;
-  display: flex;           /* Turns on the centering engine */
-  justify-content: center; /* Centers horizontally (left to right) */
-  align-items: center;     /* Centers vertically (top to bottom) */
-  background-color: #f0f0f0; 
-  overflow-x: hidden;      /* Prevents weird side-scrolling */
+}
+
+body {
+  margin: 0;
+  padding: 40px 0; /* top/bottom breathing room so card doesn't hug edges when scrolling */
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* flex-start so it scrolls naturally from top */
+  background-color: #f0f0f0;
+  overflow-x: hidden;
 }
 
 a {
