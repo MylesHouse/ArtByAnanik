@@ -1,96 +1,97 @@
 /* --- CONTAINER SETUP --- */
 .macbook-pro {
-  background-color: #ffffff;
-  width: 890px;
-  height: 633px;
+  background-color: 
+#ffffff;
+  width: 1440px; 
+  height: 900px;
   position: relative;
   overflow: hidden;
   flex-shrink: 0;
   box-shadow: 0 10px 50px rgba(0,0,0,0.1);
 }
-
-/* --- GIRL CRYING IMAGE --- */
+/* --- IMAGES & ILLUSTRATIONS --- */
 .macbook-pro .girlcrying {
   position: absolute;
-  top: 145px;
-  left: 390px;
-  width: 497px;
+  top: 206px;
+  left: 735px;
+  width: 455px;
   height: auto;
   z-index: 1;
 }
-
 /* --- MAIN QUESTION TEXT --- */
 .macbook-pro .you-have-a-lot-of {
   position: absolute;
-  top: 26px;
-  left: 20px;
-  width: 580px;
+  top: 30px;
+  left: 325px;
+  width: 821px;
   font-family: "Inria Serif", serif;
   font-weight: 700;
-  color: #14076d;
-  font-size: 22px;
-  letter-spacing: 3px;
-  line-height: 1.5;
-}
-
-/* --- OPTION TEXT (A, B, C) --- */
-.macbook-pro .p,
-.macbook-pro .text-wrapper-5,
-.macbook-pro .text-wrapper-7 {
-  position: absolute;
-  width: 380px;
-  font-family: "Inria Serif", serif;
-  font-weight: 700;
-  color: #110000;
-  font-size: 14px;
-  letter-spacing: 2px;
+  color: 
+#14076d;
+  font-size: 28px;
+  letter-spacing: 4.76px;
   line-height: 1.4;
 }
-.macbook-pro .p            { top: 195px; left: 20px; }
-.macbook-pro .text-wrapper-5 { top: 340px; left: 20px; }
-.macbook-pro .text-wrapper-7 { top: 475px; left: 20px; }
-
-/* --- SLIDER LABELS --- */
-.macbook-pro .text-wrapper,
-.macbook-pro .text-wrapper-2,
+/* --- OPTION TEXT (A, B, C) --- */
+.macbook-pro .p, 
+.macbook-pro .text-wrapper-5, 
+.macbook-pro .text-wrapper-7 {
+  position: absolute;
+  width: 520px;
+  font-family: "Inria Serif", serif;
+  font-weight: 700;
+  color: 
+#110000;
+  font-size: 16px;
+  letter-spacing: 2.72px;
+}
+.macbook-pro .p { top: 190px; left: 325px; }
+.macbook-pro .text-wrapper-5 { top: 365px; left: 325px; }
+.macbook-pro .text-wrapper-7 { top: 505px; left: 325px; }
+/* --- SLIDER LABELS (Stressed/Better) --- */
+.macbook-pro .text-wrapper, 
+.macbook-pro .text-wrapper-2, 
 .macbook-pro .text-wrapper-6,
-.macbook-pro .div,
-.macbook-pro .text-wrapper-3,
+.macbook-pro .div, 
+.macbook-pro .text-wrapper-3, 
 .macbook-pro .text-wrapper-4 {
   position: absolute;
   font-family: "Inria Serif", serif;
   font-weight: 700;
-  font-size: 12px;
-  letter-spacing: 2px;
+  font-size: 14px;
+  letter-spacing: 2.38px;
   white-space: nowrap;
 }
-
-/* Red labels */
-.macbook-pro .text-wrapper  { top: 268px; left: 20px;  color: #e91b1b; }
-.macbook-pro .text-wrapper-2 { top: 408px; left: 20px;  color: #e91b1b; }
-.macbook-pro .text-wrapper-6 { top: 543px; left: 20px;  color: #e91b1b; }
-
-/* Green labels */
-.macbook-pro .div           { top: 268px; left: 310px; color: #51a115; }
-.macbook-pro .text-wrapper-3 { top: 408px; left: 310px; color: #51a115; }
-.macbook-pro .text-wrapper-4 { top: 543px; left: 310px; color: #51a115; }
-
-/* --- SLIDERS --- */
+/* Red Labels (Left side) */
+.macbook-pro .text-wrapper { top: 267px; left: 327px; color: 
+#e91b1b; }
+.macbook-pro .text-wrapper-2 { top: 405px; left: 323px; color: 
+#e91b1b; }
+.macbook-pro .text-wrapper-6 { top: 545px; left: 323px; color: 
+#e91b1b; }
+/* Green Labels (Right side) */
+.macbook-pro .div { top: 268px; left: 621px; color: 
+#51a115; }
+.macbook-pro .text-wrapper-3 { top: 409px; left: 621px; color: 
+#51a115; }
+.macbook-pro .text-wrapper-4 { top: 549px; left: 606px; color: 
+#51a115; }
+/* --- FUNCTIONAL SLIDERS --- */
 .slider-container {
   position: absolute;
   width: 361px;
-  height: 36px;
-  background-color: #b7d5e9;
+  height: 40px;
+  background-color: 
+#b7d5e9;
   border-radius: 17px;
   padding: 0 15px;
   display: flex;
   align-items: center;
-  left: 20px;
+  left: 345px;
 }
-.slider-container.a { top: 290px; }
-.slider-container.b { top: 428px; }
-.slider-container.c { top: 563px; }
-
+.slider-container.a { top: 308px; }
+.slider-container.b { top: 445px; }
+.slider-container.c { top: 576px; }
 input[type=range] {
   -webkit-appearance: none;
   width: 100%;
@@ -99,7 +100,8 @@ input[type=range] {
 input[type=range]::-webkit-slider-runnable-track {
   width: 100%;
   height: 10px;
-  background: #ffffff;
+  background: 
+#ffffff;
   border-radius: 17px;
 }
 input[type=range]::-webkit-slider-thumb {
@@ -107,23 +109,22 @@ input[type=range]::-webkit-slider-thumb {
   height: 24px;
   width: 24px;
   border-radius: 50%;
-  background: #3d42ce;
+  background: 
+#3d42ce;
   cursor: pointer;
   margin-top: -7px;
   border: 2px solid white;
 }
-
 /* --- NEXT BUTTON --- */
 .macbook-pro .next-container {
   position: absolute;
-  top: 108px;
-  left: 700px;
+  top: 154px;
+  left: 1032px;
   width: 127px;
   height: 74px;
   cursor: pointer;
   transition: transform 0.2s ease;
   z-index: 10;
-  display: block;
 }
 .macbook-pro .next-container:hover {
   transform: scale(1.1);
@@ -134,12 +135,13 @@ input[type=range]::-webkit-slider-thumb {
 }
 .macbook-pro .text-wrapper-8 {
   position: absolute;
-  top: 120px;
-  left: 722px;
+  top: 179px;
+  left: 1054px;
   font-family: "Inria Serif", serif;
-  color: #000000;
+  color: 
+#000000;
   font-size: 20px;
   letter-spacing: 3.4px;
   pointer-events: none;
-  z-index: 11;
 }
+
