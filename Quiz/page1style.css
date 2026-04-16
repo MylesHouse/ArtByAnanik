@@ -61,3 +61,8 @@
   left: 311px;
   width: 499px;
 }
+
+.macbook-pro {
+  transform: scale(0.85);
+  transform-origin: center center;
+}
