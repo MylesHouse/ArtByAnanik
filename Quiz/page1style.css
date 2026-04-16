@@ -2,9 +2,10 @@
   background-color: #ffffff;
   width: 1440px; 
   height: 900px;
-  position: relative; /* This is the 'anchor' for everything inside */
+  position: relative;
   overflow: hidden;
-  margin: 0 auto;
+  flex-shrink: 0; /* ADD THIS LINE */
+  box-shadow: 0 10px 50px rgba(0,0,0,0.1); /* Makes it look like a nice card */
 }
 
 /* This rule is the most important one */
