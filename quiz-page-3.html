@@ -17,17 +17,16 @@
         <div class="ellipse-3"></div>
         <div class="ellipse-4"></div>
         <div class="ellipse-5"></div>
+        <div class="ellipse-6"></div>
       
         <p class="text-wrapper">You're hungry and grumpy. What food would comfort you the most?</p>
       
-        <div class="ellipse-6"></div>
-      
-        <img class="img" src="img/image-4.png" />
-        <img class="image-2" src="page3assets/image 3.svg" />
-        <img class="image-3" src="page3assets/image 5.svg" />
-        <img class="image-4" src="page3assets/image 6.svg" />
-        <img class="image-5" src="page3assets/image 7.svg" />
-        <img class="image-6" src="page3assets/image 8.svg" />
+        <div class="quiz-option image-2" onclick="selectOption(this)"><img src="page3assets/image 3.svg" /></div>
+        <div class="quiz-option image-3" onclick="selectOption(this)"><img src="page3assets/image 5.svg" /></div>
+        <div class="quiz-option image-4" onclick="selectOption(this)"><img src="page3assets/image 6.svg" /></div>
+        <div class="quiz-option image-5" onclick="selectOption(this)"><img src="page3assets/image 7.svg" /></div>
+        <div class="quiz-option image-6" onclick="selectOption(this)"><img src="page3assets/image 8.svg" /></div>
+        <div class="quiz-option image-7" onclick="selectOption(this)"><img src="page3assets/image 2.svg" /></div>
       
         <img class="line" src="page3assets/Line 1.svg" />
         <img class="line-2" src="page3assets/Line 2.svg" />
@@ -35,10 +34,24 @@
         <img class="line-4" src="page3assets/Line 6.svg" />
         <img class="line-5" src="page3assets/Line 3.svg" />
         <img class="line-6" src="page3assets/Line 5.svg" />
-      
-        <img class="image-7" src="page3assets/image 2.svg" />
-      
         <img class="line-7" src="page3assets/Line 4.svg" />
+
+        <a href="quiz-page-4.html" id="next-button" class="next-btn">NEXT</a>
     </div>
+
+    <script>
+        function selectOption(element) {
+            // Remove 'selected' class from all food items
+            const options = document.querySelectorAll('.quiz-option');
+            options.forEach(opt => opt.classList.remove('selected'));
+
+            // Add 'selected' class to the clicked item
+            element.classList.add('selected');
+
+            // Show the next button
+            const nextBtn = document.getElementById('next-button');
+            nextBtn.style.display = 'block';
+        }
+    </script>
 </body>
 </html>
