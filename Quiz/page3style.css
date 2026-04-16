@@ -1,34 +1,36 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
 .macbook-pro {
   background-color: #ffffff;
   width: 100%;
-  min-width: 890px;
+  max-width: 1000px;
   height: 100vh;
   position: relative;
   margin: 0 auto;
-  overflow: hidden;
 }
 
 /* Question text */
 .text-wrapper {
   position: absolute;
-  top: 44px;
-  left: 45px;
-  width: 767px;
-  font-size: 28px;
+  top: 40px;
+  left: 40px;
+  width: 80%;
+  font-size: 26px;
   font-weight: bold;
-  color: #000080;
-  line-height: 1.2;
-  z-index: 10;
+  color: #1b1b5e;
 }
 
-/* Food options */
+/* FOOD OPTIONS */
 .quiz-option {
   position: absolute;
   cursor: pointer;
   border: 4px solid transparent;
-  border-radius: 12px;
+  border-radius: 16px;
   box-sizing: border-box;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  transition: 0.2s;
   z-index: 10;
 }
 
@@ -40,177 +42,67 @@
   pointer-events: none;
 }
 
+/* SELECTED STATE */
 .quiz-option.selected {
   border-color: #39ff14;
-  box-shadow: 0 0 10px rgba(57, 255, 20, 0.35);
+  box-shadow: 0 0 12px rgba(57, 255, 20, 0.4);
 }
 
-/* Positions */
+/* POSITIONS (adjust if needed) */
 .image-2 {
-  top: 137px;
-  left: 69px;
-  width: 143px;
-  height: 143px;
+  top: 150px;
+  left: 80px;
+  width: 140px;
+  height: 140px;
 }
 
 .image-3 {
-  top: 304px;
-  left: 714px;
-  width: 162px;
-  height: 162px;
+  top: 150px;
+  right: 80px;
+  width: 140px;
+  height: 140px;
 }
 
 .image-4 {
-  top: 511px;
-  left: 35px;
-  width: 139px;
-  height: 119px;
+  top: 350px;
+  left: 60px;
+  width: 140px;
+  height: 140px;
 }
 
 .image-5 {
-  top: 272px;
-  left: 11px;
-  width: 127px;
-  height: 127px;
+  top: 350px;
+  right: 60px;
+  width: 140px;
+  height: 140px;
 }
 
 .image-6 {
-  top: 391px;
-  left: 25px;
-  width: 120px;
-  height: 120px;
+  top: 550px;
+  left: 100px;
+  width: 140px;
+  height: 140px;
 }
 
 .image-7 {
-  top: 471px;
-  left: 680px;
-  width: 151px;
-  height: 151px;
+  top: 550px;
+  right: 100px;
+  width: 140px;
+  height: 140px;
 }
 
-/* Main center image */
-.image {
-  position: absolute;
-  top: 109px;
-  left: 212px;
-  width: 486px;
-  height: 518px;
-}
-
-/* Decorative lines */
-.line {
-  position: absolute;
-  top: 240px;
-  left: 183px;
-  width: 135px;
-}
-
-.line-2 {
-  position: absolute;
-  top: 354px;
-  left: 127px;
-  width: 160px;
-}
-
-.line-3 {
-  position: absolute;
-  top: 436px;
-  left: 376px;
-  width: 296px;
-}
-
-.line-4 {
-  position: absolute;
-  top: 385px;
-  left: 359px;
-  width: 359px;
-}
-
-.line-5 {
-  position: absolute;
-  top: 425px;
-  left: 141px;
-  width: 167px;
-}
-
-.line-6 {
-  position: absolute;
-  top: 471px;
-  left: 171px;
-  width: 146px;
-}
-
-.line-7 {
-  position: absolute;
-  top: 192px;
-  left: 406px;
-  width: 303px;
-}
-
-/* Dots */
-.ellipse,
-.ellipse-2,
-.ellipse-3,
-.ellipse-4,
-.ellipse-5,
-.ellipse-6,
-.div {
-  position: absolute;
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  background: #ffd400;
-  z-index: 6;
-}
-
-.ellipse {
-  top: 382px;
-  left: 287px;
-}
-
-.ellipse-2 {
-  top: 349px;
-  left: 398px;
-}
-
-.ellipse-3 {
-  top: 433px;
-  left: 364px;
-}
-
-.ellipse-4 {
-  top: 418px;
-  left: 308px;
-}
-
-.ellipse-5 {
-  top: 464px;
-  left: 317px;
-}
-
-.ellipse-6 {
-  top: 344px;
-  left: 317px;
-}
-
-.div {
-  top: 379px;
-  left: 350px;
-}
-
-/* Next button */
+/* NEXT BUTTON */
 .next-btn {
   display: none;
   position: absolute;
-  top: 120px;
-  right: 120px;
-  padding: 14px 28px;
-  background: #ffffff;
-  color: #000000;
-  border: 2px solid #000000;
+  top: 100px;
+  right: 100px;
+  padding: 12px 28px;
+  background: white;
+  border: 2px solid black;
+  font-size: 20px;
   text-decoration: none;
-  font-size: 22px;
-  letter-spacing: 2px;
+  color: black;
   z-index: 20;
 }
 
