@@ -1,72 +1,93 @@
-/* Container for the whole layout */
 .macbook-pro {
     background-color: #ffffff;
     width: 100%;
-    max-width: 1440px; /* Limits width so it doesn't stretch forever */
+    min-width: 890px;
     height: 100vh;
-    margin: 0 auto;
     position: relative;
-    overflow: hidden; /* Prevents scrollbars from absolute elements */
+    margin: 0 auto;
 }
 
-/* Question Text */
-.macbook-pro .text-wrapper {
+/* The Question Text */
+.text-wrapper {
     position: absolute;
     top: 44px;
     left: 45px;
     width: 767px;
-    font-size: 24px; /* Added size since Figma exports often miss this */
-    line-height: 1.2;
-    color: #000000;
-    z-index: 10;
+    font-size: 28px;
+    font-weight: bold;
+    color: #000;
 }
 
-/* Main Background Image */
-.macbook-pro .image {
-    top: 109px;
-    left: 212px;
-    width: 486px;
-    height: 518px;
+/* --- THE BUTTON LOGIC --- */
+
+.quiz-option {
     position: absolute;
-    object-fit: cover;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 4px solid transparent; /* Hidden until clicked */
+    border-radius: 20px; /* Gives a nice rounded corner to the stroke */
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
 }
 
-/* Food Images */
-.macbook-pro .image-2 { top: 137px; left: 69px; width: 143px; height: 143px; position: absolute; }
-.macbook-pro .image-3 { top: 304px; left: 714px; width: 162px; height: 162px; position: absolute; }
-.macbook-pro .image-4 { top: 511px; left: 35px; width: 139px; height: 119px; position: absolute; }
-.macbook-pro .image-5 { top: 272px; left: 11px; width: 127px; height: 127px; position: absolute; }
-.macbook-pro .image-6 { top: 391px; left: 25px; width: 120px; height: 120px; position: absolute; }
-.macbook-pro .image-7 { top: 471px; left: 680px; width: 151px; height: 151px; position: absolute; }
+/* The Green Border that appears when JS adds the 'selected' class */
+.quiz-option.selected {
+    border-color: #4CAF50; 
+    box-shadow: 0 0 15px rgba(76, 175, 80, 0.3);
+    background-color: rgba(76, 175, 80, 0.05);
+}
 
-/* Connecting Lines */
-.macbook-pro .line   { position: absolute; top: 240px; left: 183px; width: 135px; }
-.macbook-pro .line-2 { position: absolute; top: 354px; left: 127px; width: 160px; }
-.macbook-pro .line-3 { position: absolute; top: 436px; left: 376px; width: 296px; }
-.macbook-pro .line-4 { position: absolute; top: 385px; left: 359px; width: 359px; }
-.macbook-pro .line-5 { position: absolute; top: 425px; left: 141px; width: 167px; }
-.macbook-pro .line-6 { position: absolute; top: 471px; left: 171px; width: 146px; }
-.macbook-pro .line-7 { position: absolute; top: 192px; left: 406px; width: 303px; }
+.quiz-option img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
 
-/* Small decorative dots (Ellipses) */
-.macbook-pro .ellipse, 
-.macbook-pro .ellipse-2, 
-.macbook-pro .ellipse-3, 
-.macbook-pro .ellipse-4, 
-.macbook-pro .ellipse-5, 
-.macbook-pro .ellipse-6,
-.macbook-pro .img {
+/* Positioning for your specific images */
+.image-2 { top: 137px; left: 69px; width: 143px; height: 143px; }
+.image-3 { top: 304px; left: 714px; width: 162px; height: 162px; }
+.image-4 { top: 511px; left: 35px; width: 139px; height: 119px; }
+.image-5 { top: 272px; left: 11px; width: 127px; height: 127px; }
+.image-6 { top: 391px; left: 25px; width: 120px; height: 120px; }
+.image-7 { top: 471px; left: 680px; width: 151px; height: 151px; }
+
+/* The Main Background Graphic */
+.image { top: 109px; left: 212px; width: 486px; height: 518px; position: absolute; }
+
+/* Decorative Lines and Dots */
+.line { position: absolute; top: 240px; left: 183px; width: 135px; }
+.line-2 { position: absolute; top: 354px; left: 127px; width: 160px; }
+.line-3 { position: absolute; top: 436px; left: 376px; width: 296px; }
+.line-4 { position: absolute; top: 385px; left: 359px; width: 359px; }
+.line-5 { position: absolute; top: 425px; left: 141px; width: 167px; }
+.line-6 { position: absolute; top: 471px; left: 171px; width: 146px; }
+.line-7 { position: absolute; top: 192px; left: 406px; width: 303px; }
+
+.ellipse, .ellipse-2, .ellipse-3, .ellipse-4, .ellipse-5, .ellipse-6, .div {
+    position: absolute; width: 9px; height: 9px; border-radius: 50%; background: #000;
+}
+.ellipse { top: 382px; left: 287px; }
+.ellipse-2 { top: 349px; left: 398px; }
+.ellipse-3 { top: 433px; left: 364px; }
+.ellipse-4 { top: 418px; left: 308px; }
+.ellipse-5 { top: 464px; left: 317px; }
+.ellipse-6 { top: 344px; left: 317px; }
+.div { top: 379px; left: 350px; }
+
+/* NEXT BUTTON */
+.next-btn {
+    display: none; /* Hidden until an image is clicked */
     position: absolute;
-    width: 9px;
-    height: 9px;
-    background-color: #d9d9d9; /* Added color so they are visible */
-    border-radius: 50%;
+    bottom: 40px;
+    right: 60px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 45px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
-
-.macbook-pro .ellipse   { top: 382px; left: 287px; }
-.macbook-pro .img       { top: 379px; left: 350px; }
-.macbook-pro .ellipse-2 { top: 349px; left: 398px; }
-.macbook-pro .ellipse-3 { top: 433px; left: 364px; }
-.macbook-pro .ellipse-4 { top: 418px; left: 308px; }
-.macbook-pro .ellipse-5 { top: 464px; left: 317px; }
-.macbook-pro .ellipse-6 { top: 344px; left: 317px; }
